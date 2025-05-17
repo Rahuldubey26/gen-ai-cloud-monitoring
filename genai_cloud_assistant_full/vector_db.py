@@ -17,7 +17,7 @@
 #     docs = splitter.split_documents(documents)
 
 #     # Create embeddings
-#     embeddings = OpenAIEmbeddings(openai_api_key="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")
+#     embeddings = OpenAIEmbeddings(openai_api_key="open-ai-key")
 
 #     # Create vector store and save locally
 #     vectorstore = FAISS.from_documents(docs, embeddings)
@@ -37,7 +37,7 @@ from langchain.text_splitter import CharacterTextSplitter
 load_dotenv()
 
 # OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_API_KEY="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"
+OPENAI_API_KEY="open-ai-key"
 if not OPENAI_API_KEY:
     raise ValueError("❌ OPENAI_API_KEY not found in .env file.")
 
