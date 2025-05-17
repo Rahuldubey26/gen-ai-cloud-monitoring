@@ -10,7 +10,7 @@ load_dotenv()
 
 def get_genai_response(prompt: str) -> str:
     try:
-        embeddings = OpenAIEmbeddings(openai_api_key="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")
+        embeddings = OpenAIEmbeddings(openai_api_key="open-ai-key")
         # vectorstore = FAISS.load_local("vector_db", embeddings)
         vectorstore = FAISS.load_local("model/", embeddings, allow_dangerous_deserialization=True)
 
@@ -22,4 +22,4 @@ def get_genai_response(prompt: str) -> str:
     except Exception as e:
         return f"Error: {str(e)}"
     
-print("Loaded OpenAI Key:", os.getenv("OPENAI_API_KEY"))
+# print("Loaded OpenAI Key:", os.getenv("OPENAI_API_KEY"))
